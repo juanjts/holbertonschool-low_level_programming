@@ -3,20 +3,18 @@
  *main - Puts out 'Holberton' followed by a newline
  * _putchar - writes the character c to stdout
  *
- * Return: On success 1.
+ * Return: zero
  */
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
-	_putchar('\n');
+	char string[] = "Holberton";
+	int c = 0;
 
+	while (string[c] != '\0')
+	{
+		_putchar(string[c]);
+		c++;
+	}
+	_putchar('\n');
 	return (0);
 }
