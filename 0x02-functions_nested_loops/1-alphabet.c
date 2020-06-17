@@ -1,14 +1,21 @@
 #include "holberton.h"
-#include <stdio.h>
-/*
- * main - Puts out 'Holberton' followed by a newline
- *
- * Return: Always 0.
- */
 
-int main(void)
+/**
+ *print_alphabet- use only user defined variables to create output
+ *
+ *Return: print to stdout the alphabet, in lowercase, followed by a new line.
+ */
+void print_alphabet(void)
 {
-	print_alphabet();
+	char c;
+
+	c = 'a';
+
+	while (c <= 'z')
+	{
+		_putchar(c);
+		c++;
+	}
 	_putchar('\n');
-	return (0);
+
 }
