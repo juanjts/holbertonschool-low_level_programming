@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * sqrt_a - check the code for Holberton School students.
+ * sqrt_dual - check the code for Holberton School students.
  * @a: static parameter
  * @b: one by one parameter
  * Return: dual parameter function
