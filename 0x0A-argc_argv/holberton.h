@@ -5,5 +5,6 @@
 
 int _putchar(char c);
 int main(int argc, char *argv[]);
+int issymbol(char* s);
 
 #endif /* HOLBERTON_H */
