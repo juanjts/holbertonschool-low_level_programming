@@ -1,47 +1,35 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "holberton.h"
 
 /**
- * main - ppal function
- * issymbol - is an alternative function to compares digit in assci values
- * @argc: counter of parameters
- * @argv: value of parameters in especific memori position
- * Return: zero
+ * main - prints buffer in hexa
+ * @argc: he number of command line arguments
+ * @argv: An array containing the program command line arguments.
+ * Return: Nothing.
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int sum = 0, i, j;
 
-	for (i = 1; i < argc; i++)
+	if (argc > 0)
 	{
-
-		if (argv[i] == '\0')
+		for (i = 1; i < argc; i++)
 		{
-			printf("0\n");
+			for (j = 0; argv[i][j] != '\0'; j++)
+			{
+				if (!(isdigit(argv[i][j])))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[i]);
 		}
-		else if (issymbol(argv[i]) == 1)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		sum = sum + atoi(argv[i]);
+			printf("%d\n", sum);
 	}
-	printf("%d", sum);
-	return (0);
-}
-
-int issymbol(char* s)
-{
-	int n;
-
-	for (n = 0; s[n] != '\0'; n++)
-	{
-		if (!isdigit(s[n]))
-		{
-			return (1);
-		}
-	}
+	else
+	printf("0\n");
 	return (0);
 }
