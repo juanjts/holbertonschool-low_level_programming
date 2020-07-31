@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- *get_endianness - checks the endianness. 
+ *get_endianness - checks the endianness.
+ *
  *Return: void
  */
 int get_endianness(void)
@@ -13,5 +14,5 @@ int get_endianness(void)
 	{
 		return (1);
 	}
-	return(0);
+	return (0);
 }
